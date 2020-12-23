@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:orientation="horizontal"
+        android:padding="15sp">
+
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="35dp"
+            android:layout_toEndOf="@id/backarrow"
+            android:src="@drawable/stockedge"
+            android:layout_marginStart="20dp"
+            android:layout_height="35dp"/>
+
+        <TextView
+            android:id="@+id/word"
+            android:layout_width="wrap_content"
+            android:text="Selectors"
+            android:layout_toEndOf="@id/logo"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_height="35dp"/>
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="35dp"
+            android:layout_toEndOf="@id/word"
+            android:src="@drawable/ic_baseline_share_24"
+            android:layout_marginStart="80dp"
+            android:layout_height="35dp"/>
+
+        <ImageView
+            android:id="@+id/backward"
+            android:layout_width="35dp"
+            android:layout_toEndOf="@id/share"
+            android:src="@drawable/ic_baseline_fast_forward_24"
+            android:layout_marginStart="20dp"
+            android:layout_height="35dp"/>
+
+    </RelativeLayout>
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:layout_margin="15sp"
+        style="@style/MaterialSearchBarLight"
+        app:mt_speechMode="true"
+        app:mt_hint="Search for a Selector or Industry"
+        app:mt_maxSuggestionsCount="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:outlineAmbientShadowColor="#9C9696"
+        android:outlineSpotShadowColor="#A1A0A0"
+        android:id="@+id/searchBar"
+        tools:targetApi="p" />
+
+    <ExpandableListView
+        android:id="@+id/expandable_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
